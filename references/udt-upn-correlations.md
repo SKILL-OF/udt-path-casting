@@ -12,25 +12,31 @@ _/AS/<identity>/_
 One agent's private ungeon.
 
 ```text
-__/AS/<shared-identity>/AS/<personal-identity>/_
+___/AS/<shared-identity>/AS/<personal-identity>/_
 ```
 
-A personal actor writing into a shared identity's dungeon. The final `_` is
-the actor's private home; the parent `__` is the group-capable context.
+A personal actor projecting into a shared identity from the supernal
+THUNGEON. The final `_` is the actor's private home; a `__` below the
+THUNGEON is the group-capable context.
 
 ```text
-__/AS/<shared-identity>/__
+___/AS/<shared-identity>/__
 ```
 
-Collective work in the shared dungeon itself. Use only when group state,
-shared goals, or multi-agent exploration is intended.
+Collective work in a shared dungeon beneath the supernal THUNGEON. Use only
+when group state, shared goals, or multi-agent exploration is intended.
 
 ```text
-__/AS/<shared-identity>/AS/<personal-identity>/__
+___/AS/<shared-identity>/AS/<personal-identity>/__
 ```
 
-An individual actor's group-work surface inside a shared identity. The final
-component is collective, so mutations need an explicit group-work attribution.
+An individual actor's group-work surface inside a shared identity and beneath
+the supernal THUNGEON. The final component is collective, so mutations need an
+explicit group-work attribution.
+
+The THUNGEON is `___` and is supernal to all `__` and `_` spaces. Do not treat
+it as a synonym for a dungeon: a dungeon is a group work surface, while the
+THUNGEON is the higher-order field containing the dungeon/ungeon hierarchy.
 
 ## Historical correlations
 
@@ -57,8 +63,9 @@ specification is found. Never silently upgrade an analogy into a standard.
 ## Case study
 
 2026-08-13, `🔱9♦️`: the user's correction established that
-`__/AS/<shared-identity>/AS/<personal-identity>/_` disambiguates which actor of
-a group writes to disk. The skill adopts this as the canonical solo projection
-pattern. The neighboring `📎10♠️` office surface remains a separate identity;
-its shared relationship belongs in a dungeon, while each actor retains an
-ungeon for attributable work.
+`___/AS/<shared-identity>/AS/<personal-identity>/_` disambiguates which actor of
+a group writes to disk, while placing the actor below the supernal THUNGEON.
+The skill adopts this as the canonical solo projection pattern. The
+neighboring `📎10♠️` office surface remains a separate identity; its shared
+relationship belongs in a dungeon beneath the THUNGEON, while each actor
+retains an ungeon for attributable work.
