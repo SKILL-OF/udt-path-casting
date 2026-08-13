@@ -1,0 +1,4 @@
+interface:
+  display_name: UDT Path Casting
+  short_description: Cast shared dungeons and personal ungeons safely
+  default_prompt: Use $udt-path-casting to resolve shared and personal filesystem casts before writing files.
