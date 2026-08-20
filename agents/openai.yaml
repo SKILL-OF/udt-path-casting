@@ -1,4 +1,4 @@
 interface:
-  display_name: UDT Path Casting
-  short_description: Cast shared dungeons and personal ungeons safely
-  default_prompt: Use $udt-path-casting to resolve shared and personal filesystem casts before writing files.
+  display_name: "UDT Path Casting"
+  short_description: "Resolve agent spaces and world-model joins"
+  default_prompt: "Use $udt-path-casting to interpret this agent path and preserve its attribution and observed relationships."
