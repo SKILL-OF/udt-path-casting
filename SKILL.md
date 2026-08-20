@@ -1,6 +1,6 @@
 ---
 name: udt-path-casting
-description: Resolve UPN/UDT-style filesystem casts for shared dungeons, individual ungeons, and personal projections before reading or writing agent-owned files.
+description: Resolve UPN/UDT-style filesystem casts for private, shared, and world-edge agent spaces, including evidence-backed MAC, hostname, IP, and network relationship paths. Use before interpreting or creating agent-owned casting paths; do not use for ordinary filesystem organization.
 ---
 
 # UDT Path Casting
@@ -13,12 +13,40 @@ workspace. The path is an attribution contract, not decorative naming.
 - `_` is an **ungeon**: a single-agent zone.
 - `__` is a **dungeon**: a group-capable container where multiple agents may
   interact.
-- `thungeon` is a dungeon whose purpose is explicitly collective exploration,
-  status, or goals; do not infer that purpose from underscores alone.
+- `___` is a **thungeon**: an edge where a local cast meets another authority,
+  machine, network, person, or world model. It may carry escalation, but does
+  not imply elevated OS privilege.
 - `AS` introduces an as-cast identity or role.
 - `__/AS/<shared-identity>/AS/<personal-identity>/_` is a valid solo agent
   home: one actor projecting into a shared identity space while retaining a
   private write zone.
+
+## Typed world-model joins
+
+Under a thungeon, `AS/<TYPE>/<VALUE>` may cast an observed dimension such as
+`NETWORK`, `MAC`, `HOST`, or `IP`. Repeated `AS` segments materialize an
+evidence-backed relationship:
+
+```text
+___/AS/NETWORK/192.168.0.0_24/AS/MAC/F4-F5-D8-CB-CA-3A/AS/HOST/AURORA/AS/IP/192.168.0.35/_
+```
+
+The leaf is a casting of that observed combination, not proof of a permanent
+device identity. MAC addresses, hostnames, and IP addresses are mutable,
+reusable, and potentially ambiguous. Permit many-to-many relationships and
+preserve conflicting candidates.
+
+Short paths such as `___/AS/HOST/AURORA/_` and
+`___/AS/IP/192.168.0.35/_` are indexes or pointers to qualified castings, not
+independent identity records. Scope shortened IP forms such as `.35` beneath a
+network cast. Preserve old relationships when an address or hostname changes.
+
+An observed entity is not automatically a `bhartii-device`; recruitment or
+recruitability is a separate relationship supplied by evidence or authority.
+
+For normalization, history, portable pointer strategies, and Windows-safe
+value encoding, read
+[references/world-model-joins.md](references/world-model-joins.md).
 
 ## Before a filesystem action
 
@@ -32,6 +60,8 @@ workspace. The path is an attribution contract, not decorative naming.
    dungeon is shared.
 6. If the path is ambiguous, stop at read-only inspection and report the
    competing parses.
+7. For world-model joins, record source, confidence, first/last observation,
+   and current/historical status outside the path or in leaf metadata.
 
 ## Boundaries
 
