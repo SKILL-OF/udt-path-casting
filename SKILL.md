@@ -13,19 +13,24 @@ workspace. The path is an attribution contract, not decorative naming.
 - `_` is an **ungeon**: a single-agent zone.
 - `__` is a **dungeon**: a group-capable container where multiple agents may
   interact.
-- `thungeon` is a dungeon whose purpose is explicitly collective exploration,
-  status, or goals; do not infer that purpose from underscores alone.
+- `___` is a **THUNGEON**: the supernal context above all dungeons and
+  ungeons. It is the containing field in which shared identities, personal
+  projections, and their group relationships are situated.
+- Do not flatten `___` into another spelling of dungeon. A dungeon is a
+  multi-agent work surface; a THUNGEON is the higher-order context that can
+  contain many dungeons and ungeons.
 - `AS` introduces an as-cast identity or role.
-- `__/AS/<shared-identity>/AS/<personal-identity>/_` is a valid solo agent
+- `___/AS/<shared-identity>/AS/<personal-identity>/_` is a valid solo agent
   home: one actor projecting into a shared identity space while retaining a
-  private write zone.
+  private write zone inside the supernal THUNGEON.
 
 ## Before a filesystem action
 
 1. Parse every underscore and `AS` segment from left to right.
 2. Identify the shared/group identity and the personal actor separately.
-3. Resolve the final `_` or `__` component: final `_` means personal work;
-   final `__` means group work.
+3. Resolve the hierarchy: `___` is supernal context, `__` is group-capable
+   work, and `_` is personal work. A final `_` means the named actor writes
+   alone; a final `__` means the path itself is collective work.
 4. Check the local cast, repository remote, branch, and durable identity
    record before writing.
 5. Attribute the mutation to the personal identity, even when the enclosing
